@@ -588,6 +588,7 @@ public class BarcodeDatamatrix {
         int i, j, p, x, y, xs, ys, z;
         int xByte = (dm.width + barcodeDimensions.getWs() * 2 + 7) / 8;
         Arrays.fill(image, (byte) 0);
+        int ws = barcodeDimensions.getWs();
         //alignment patterns
         //dotted horizontal line
         for (i = ws; i < dm.height + ws; i += dm.heightSection) {
@@ -630,7 +631,7 @@ public class BarcodeDatamatrix {
 
     private int processExtensions(byte[] text, int textOffset, int textSize, byte[] data) {
         int order, ptrIn, ptrOut, eci, fn, ft, fi, c;
-        if ((options & DM_EXTENSION) == 0) {
+        if ((this.barcodeDimensions.getOptions() & DM_EXTENSION) == 0) {
             return 0;
         }
         order = 0;
@@ -764,10 +765,10 @@ public class BarcodeDatamatrix {
             return DM_ERROR_EXTENSION;
         }
         e = -1;
-        if (height == 0 || width == 0) {
+        if (barcodeDimensions.getHeight() == 0 || barcodeDimensions.getWidth() == 0) {
             last = dmSizes[dmSizes.length - 1];
             e = getEncodation(text, textOffset + extOut, textSize - extOut, data, extCount, last.dataSize - extCount,
-                    options, false);
+                    barcodeDimensions.getOptions(), false);
             if (e < 0) {
                 return DM_ERROR_TEXT_TOO_BIG;
             }
@@ -782,7 +783,7 @@ public class BarcodeDatamatrix {
             barcodeDimensions.setWidth(dm.width);
         } else {
             for (k = 0; k < dmSizes.length; ++k) {
-                if (height == dmSizes[k].height && width == dmSizes[k].width) {
+                if (barcodeDimensions.getHeight() == dmSizes[k].height && barcodeDimensions.getWidth() == dmSizes[k].width) {
                     break;
                 }
             }
@@ -791,13 +792,13 @@ public class BarcodeDatamatrix {
             }
             dm = dmSizes[k];
             e = getEncodation(text, textOffset + extOut, textSize - extOut, data, extCount, dm.dataSize - extCount,
-                    options, true);
+                    barcodeDimensions.getOptions(), true);
             if (e < 0) {
                 return DM_ERROR_TEXT_TOO_BIG;
             }
             e += extCount;
         }
-        if ((options & DM_TEST) != 0) {
+        if ((barcodeDimensions.getOptions() & DM_TEST) != 0) {
             return DM_NO_ERROR;
         }
         image = new byte[(((dm.width + 2 * barcodeDimensions.getWs()) + 7) / 8) * (dm.height + 2 * barcodeDimensions.getWs())];
@@ -821,7 +822,7 @@ public class BarcodeDatamatrix {
         if (image == null) {
             return null;
         }
-        byte[] g4 = CCITTG4Encoder.compress(image, width + 2 * ws, height + 2 * ws);
+        byte[] g4 = CCITTG4Encoder.compress(image, barcodeDimensions.getWidth() + 2 * barcodeDimensions.getWs(), barcodeDimensions.getHeight() + 2 * barcodeDimensions.getWs());
         return Image.getInstance(barcodeDimensions.getWidth() + 2 * barcodeDimensions.getWs(), barcodeDimensions.getHeight() + 2 * barcodeDimensions.getWs(), false, Image.CCITTG4, 0, g4, null);
     }
 
@@ -984,8 +985,8 @@ public class BarcodeDatamatrix {
 
         DmParams(int height, int width, int heightSection, int widthSection, int dataSize, int dataBlock,
                 int errorBlock) {
-            barcodeDimensions.setHeight(height);
-            barcodeDimensions.setWidth(width);
+            this.height = height;
+            this.width = width;
             this.heightSection = heightSection;
             this.widthSection = widthSection;
             this.dataSize = dataSize;
