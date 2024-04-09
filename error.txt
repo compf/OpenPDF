@@ -1,0 +1,273 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 5 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 5 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] OpenPDF - Free and Open PDF                                        [pom]
+[INFO] openpdf                                                            [jar]
+[INFO] pdf-swing                                                          [jar]
+[INFO] pdf-toolbox                                                        [jar]
+[INFO] openpdf-fonts-extra                                                [jar]
+[INFO] 
+[INFO] -----------------< com.github.librepdf:openpdf-parent >-----------------
+[INFO] Building OpenPDF - Free and Open PDF 2.0.3-SNAPSHOT                [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ openpdf-parent ---
+[INFO] argLine set to -javaagent:/home/compf/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/compf/data/uni/master/sem4/github_projects/OpenPDF/target/jacoco.exec
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (compile-java-17) @ openpdf-parent ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --------------------< com.github.librepdf:openpdf >---------------------
+[INFO] Building openpdf 2.0.3-SNAPSHOT                                    [2/5]
+[INFO]   from openpdf/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ openpdf ---
+[INFO] argLine set to -javaagent:/home/compf/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openpdf ---
+[INFO] Copying 53 resources from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources-filtered to target/classes
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ openpdf ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 378 source files with javac [debug release 17] to target/classes
+[INFO] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/crypto/AESCipher.java: Some input files use or override a deprecated API.
+[INFO] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/crypto/AESCipher.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/PdfWriter.java:[1405,55] unchecked method invocation: method iterateOutlines in class com.lowagie.text.pdf.SimpleBookmark is applied to given types
+  required: com.lowagie.text.pdf.PdfWriter,com.lowagie.text.pdf.PdfIndirectReference,java.util.List<java.util.Map<java.lang.String,java.lang.Object>>,boolean
+  found:    com.lowagie.text.pdf.PdfWriter,com.lowagie.text.pdf.PdfIndirectReference,java.util.List,boolean
+[WARNING] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/PdfWriter.java:[1405,70] unchecked conversion
+  required: java.util.List<java.util.Map<java.lang.String,java.lang.Object>>
+  found:    java.util.List
+[WARNING] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/PdfReader.java:[3061,21] unchecked method invocation: method putAll in class java.util.HashMap is applied to given types
+  required: java.util.Map<? extends K,? extends V>
+  found:    java.util.HashMap
+[WARNING] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/PdfReader.java:[3061,52] unchecked conversion
+  required: java.util.Map<? extends K,? extends V>
+  found:    java.util.HashMap
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[593,18] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[593,38] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[594,22] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[594,41] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[599,41] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[599,61] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[600,22] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[600,41] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[605,18] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[605,37] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[606,22] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[606,42] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[611,40] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[611,59] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[612,26] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[612,46] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[623,45] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[623,58] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[633,14] cannot find symbol
+  symbol:   variable options
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[767,13] cannot find symbol
+  symbol:   variable height
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[767,28] cannot find symbol
+  symbol:   variable width
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[770,21] cannot find symbol
+  symbol:   variable options
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[785,21] cannot find symbol
+  symbol:   variable height
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[785,52] cannot find symbol
+  symbol:   variable width
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[794,21] cannot find symbol
+  symbol:   variable options
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[800,14] cannot find symbol
+  symbol:   variable options
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,52] cannot find symbol
+  symbol:   variable width
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,64] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,68] cannot find symbol
+  symbol:   variable height
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,81] cannot find symbol
+  symbol:   variable ws
+  location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[987,13] non-static variable barcodeDimensions cannot be referenced from a static context
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[988,13] non-static variable barcodeDimensions cannot be referenced from a static context
+[INFO] 32 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for OpenPDF - Free and Open PDF 2.0.3-SNAPSHOT:
+[INFO] 
+[INFO] OpenPDF - Free and Open PDF ........................ SUCCESS [  0.198 s]
+[INFO] openpdf ............................................ FAILURE [  4.147 s]
+[INFO] pdf-swing .......................................... SKIPPED
+[INFO] pdf-toolbox ........................................ SKIPPED
+[INFO] openpdf-fonts-extra ................................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.188 s
+[INFO] Finished at: 2024-04-10T01:42:08+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project openpdf: Compilation failure: Compilation failure: 
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[593,18] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[593,38] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[594,22] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[594,41] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[599,41] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[599,61] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[600,22] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[600,41] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[605,18] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[605,37] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[606,22] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[606,42] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[611,40] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[611,59] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[612,26] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[612,46] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[623,45] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[623,58] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[633,14] cannot find symbol
+[ERROR]   symbol:   variable options
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[767,13] cannot find symbol
+[ERROR]   symbol:   variable height
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[767,28] cannot find symbol
+[ERROR]   symbol:   variable width
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[770,21] cannot find symbol
+[ERROR]   symbol:   variable options
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[785,21] cannot find symbol
+[ERROR]   symbol:   variable height
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[785,52] cannot find symbol
+[ERROR]   symbol:   variable width
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[794,21] cannot find symbol
+[ERROR]   symbol:   variable options
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[800,14] cannot find symbol
+[ERROR]   symbol:   variable options
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,52] cannot find symbol
+[ERROR]   symbol:   variable width
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,64] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,68] cannot find symbol
+[ERROR]   symbol:   variable height
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[824,81] cannot find symbol
+[ERROR]   symbol:   variable ws
+[ERROR]   location: class com.lowagie.text.pdf.BarcodeDatamatrix
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[987,13] non-static variable barcodeDimensions cannot be referenced from a static context
+[ERROR] /home/compf/data/uni/master/sem4/github_projects/OpenPDF/openpdf/src/main/java/com/lowagie/text/pdf/BarcodeDatamatrix.java:[988,13] non-static variable barcodeDimensions cannot be referenced from a static context
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :openpdf
